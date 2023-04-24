@@ -10,7 +10,9 @@ const routes = {
   getProfiles: '/profiles',
   getProfileById: '/current/:id',
   createNewProfile: '/profile',
-  deleteProfileById: '/profile/:id'
+  deleteProfileById: '/profile/:id',
+  likeProfile: '/like',
+  rejectProfile: '/reject'
 };
 
 // main
@@ -22,6 +24,7 @@ router.get(routes.getProfiles, controllers.getProfiles);
 router.get(routes.getProfileById, controllers.getProfileById);
 router.post(routes.createNewProfile, controllers.createNewProfile);
 router.delete(routes.deleteProfileById, controllers.deleteProfileById);
+router.put(routes.likeProfile, controllers.likeProfile);
 
 module.exports = {
   router
